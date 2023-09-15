@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <title>رحلتي</title>
+        <link href="assets/css/styles.css" rel="stylesheet" />
+
+        <style>
+                @font-face { font-family: lamaSans; src: url('fonts/TTF/Expanded/LamaSans-RegularExpanded.ttf'); }
+                
+                body{
+                    font-family: lamaSans;
+                }
+
+                .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.box1{
+    border-radius: 20px;
+    padding-top: 48px;
+    padding-right: 33px;
+    padding-bottom: 48px;
+    padding-left: 33px;
+    background-color: #FFE7AC;
+    max-width: 410px;
+    min-height: 551px;
+    border-color: #191919;
+    border: 1.5px solid;
+    box-shadow: 10px 10px black;
+}
+
+.box2{
+    padding-top: 12px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 12px;
+    border-radius: 25px;
+    background-color: #F1EFFD;
+    max-width: 424px;
+
+    
+}
+
+.box3{
+    border-radius: 20px;
+    padding-top: 48px;
+    padding-right: 33px;
+    padding-bottom: 48px;
+    padding-left: 33px;
+    background-color: #FFE7AC;
+    max-width: 648pxpx;
+    min-height: 646px;
+    border-color: #191919;
+    border: 1.5px solid;
+    box-shadow: 10px 10px black;
+}
+
+
+.box4{
+    padding-top: 96px;
+    padding-right: 33px;
+    padding-bottom: 12px;
+    padding-left: 33px;
+    background-color: #191919;
+    width: 100%;
+    min-height: 517px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+::placeholder{
+    font-family: lamaSans;
+
+}
+
+        </style>
+        
+        
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 "  id="mainNav" >
+                <div  class="container"    >
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive" styl >
+                        <a class="navbar-brand" href="#page-top"  > <img src="assets/img/video.png">  &nbsp; يوتيوب</a>
+
+                        <ul class="navbar-nav my-2 my-lg-0" >
+                            <li class="nav-item"><a class="nav-link"  href="#contact" >اتصل بنا</a></li>
+                            <li class="nav-item"><a class="nav-link"  href="#clients">آراء العملاء</a></li>
+                            <li class="nav-item"><a class="nav-link"  href="#prices">الأسعار</a></li>
+                            <li class="nav-item"><a class="nav-link"   href="#services">الخدمات</a></li>
+                            <li class="nav-item"><a class="nav-link"   href="#trips">الرحلات</a></li>
+                        </ul>
+                    </div>
+                        <a class="navbar-brand" href="#page-top" style="font-weight: 900; font-size: 30px; direction: rtl;"   >رحلاتي<span style="color: #FEC430">.</span> </a>
+                </div>
+            </nav>
+            
+
+
+
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1  style="font-family: lamaSans; color: white; font-size: 68px; font-weight: 900;">سافر معنا إلى العالم</h1>
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5" style="font-family: lamaSans; color: white; font-size: 24px; font-weight: 500;">نوفر لك أفضل الرحلات التي تحتاجها لجميع البلدان
+                            وبخدمات مخصصة لك ولعائلتك</p>
+                        <a class="btn btn-warning btn-xl" href="#about" style="font-family: lamaSans; font-weight: 700; font-size: 18px;"> <img src="assets/img/arrow.png" alt=""> &nbsp; &nbsp; احجز الآن</a>
+                        <br>
+                        <br>
+                        <div style="margin: auto;">
+                            <img src="assets/img/arrow_big.png" style="display:inline-block">
+                            <span style="display: inline-block;padding-right: 130px;">
+                                <span style="font-family: lamaSans; color: white; font-size: 20px; font-weight: 700;">تابع للأسفل</span>    
+                                <img src="assets/img/mouse.png" style="display: block;padding-left: 10px;">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <br id="trips">
+
+        <br>
+        <br>
+        <br>
+
+    <div class="container-fluid" >
+        <p style="direction: rtl;font-weight: 900;font-size: 24px;color: #A5A5A5;padding-right: 20px;" >قم بزيارة العالم</p>
+        <h2 style="direction: rtl;font-weight: 900;font-size: 48px;color: #191919;padding-right: 20px;" >الرحلات التي نقدمها</h2>
+    </div>        
+
+
+
+
+<span id="app">
+    
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        
+            <div class="carousel-inner">
+
+                <div class="container" >
+
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+        
+                        <div class="col" v-for="card in active_cards">
+                            <div class="card" style="border-color: rgba(0, 0, 0, 0);">
+                                
+                                <img class="card-img" v-bind:src="card.img">
+                                <div class="card-img-overlay text-white d-flex flex-column justify-content-center" style="padding-left: 24px;padding-right: 24px;padding-top: 500px;">
+                                    <span style="background-color: white;padding-top:20px;padding-right: 20px;border-radius: 20px;">
+                                    <p style="font-size: 24px; font-weight: 900; color: #191919;direction: rtl;">{{card.name}}</p>
+                                    <p style="font-size: 18px; font-weight: 500; color: #797979;direction: rtl;">{{card.price}}</p>
+                                    </span>
+                                </div>
+                          </div>
+                        </div>
+        
+                    
+                    </div>
+                  </div>
+                </div>     
+                
+                <a class="carousel-control-prev" @click="prev()" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </a>
+                  <a class="carousel-control-next" @click="next()" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </a>
+
+            </div>
+
+            
+          </div>
+          
+
+          
+
+          <br id="services">
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="container-fluid" style="text-align: center;">
+            <p style="direction: rtl;font-weight: 900;font-size: 24px;color: #A5A5A5;" >تمتع في رحلتك</p>
+            <h2 style="direction: rtl;font-weight: 900;font-size: 48px;color: #191919;" >مجموعة من خدماتنا</h2>
+
+        </div>        
+
+        <br>
+        <br>
+        <br>
+        
+    
+        <div class="container" >
+
+            <div style="background-color: #F1EFFD;border-radius: 15px;padding-bottom: 40px;">
+
+    
+
+                <div class="row row-cols-1 row-cols-md-3 g-4"  >
+        
+                    <div class="col" style="margin-top: 0px;" >
+                        <div class="card" style="border-color: rgba(0, 0, 0, 0);background-color: rgba(0, 0, 0, 0);" >
+                            <img class="card-img mx-auto d-block" id="img1" src="assets/img/service1.png" style="height: 328px;width: 263px;margin-top: 95px;">
+                        </div>
+                    </div>
+
+                    <div class="col" style="margin-top: 0px;"  >
+                        <div class="card" style="border-color: rgba(0, 0, 0, 0);background-color: rgba(0, 0, 0, 0);">
+                            <img class="card-img mx-auto d-block" id="img2" src="assets/img/service2.png" style="height: 427px;width: 256px;">
+                        </div>
+                    </div>
+
+                    <div class="col" style="margin-top: 0px;" >
+                        <div class="card" style="border-color: rgba(0, 0, 0, 0);background-color: rgba(0, 0, 0, 0);">
+                            <img class="card-img mx-auto d-block" src="assets/img/service3.png" style="height: 328px;width: 263px;margin-top: 95px;">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+            
+            
+        
+
+        <br>
+
+        <br>
+        <br id="prices">
+        <br>
+        <br>
+    
+        <div class="container-fluid">
+            <p style="direction: rtl;font-weight: 900;font-size: 24px;color: #A5A5A5;padding-right: 20px;" >لا تقلق حول التكلفة</p>
+            <h2 style="direction: rtl;font-weight: 900;font-size: 48px;color: #191919;padding-right: 20px;" >خطط تناسب ميزانيتك</h2>
+        </div>        
+
+        <br>
+        <br>
+        <br>
+
+
+        <div class="container" style="margin: auto;">
+            <div class="row row-cols-1 row-cols-md-3 g-3"  >
+    
+                
+                <div class="col" style="margin-top: 47px;">
+    
+                    <div class = "card box1">
+                        
+                        <p style="direction:rtl;font-size: 24px;font-weight: 700;"><span style="font-size: 36px;font-weight: 900;">$850</span> / للشخص</p>
+                        <h3 style="direction:rtl;font-size: 24px;font-weight: 900;">خطة رجال الأعمال</h3>
+                        <p style="direction:rtl;font-size: 24px;font-weight: 700;"><span style="font-size: 18px;font-weight: 400;">كونك شخص ذو ذوق خاص ستكون هذه الخطة هي ما يناسبك تماماً</p>
+                        
+                        <hr style="height: 1px;color:#4C4C4C;opacity: 1;">
+                        <ul style="list-style-image: url(assets/img/point.png);direction: rtl;font-size: 18px;font-weight:600;">
+                            <li >بطاقات سفر بدرجة رجال الأعمال</li>
+                            <li > حجز بفندق خمس نجوم </li>
+                            <li >متابعة خاصة لإحتياجاتك</li>
+                        </ul>
+
+                        <br>
+                        <br>
+
+
+                        <div class="container-fluid" style="text-align: center;">
+
+                        <a  class="btn btn btn-xl" href="#about" style="font-family: lamaSans; font-weight: 700; font-size: 18px;background-color: rgba(0, 0, 0, 0); border: 1px solid black;border-radius: 20px;width: 100%;"> <img src="assets/img/arrow.png" alt=""> &nbsp; &nbsp; احجز الآن</a>
+
+                    </div>   
+                    
+                    </div>
+                </div>
+
+                <div class="col" >
+    
+                    <div class = "card box1"  style="background-color: #46368B;color: white;border-color: rgba(0, 0, 0, 0);">
+                        <p style="direction:rtl;font-size: 24px;font-weight: 700;"><span style="font-size: 36px;font-weight: 900;">$520</span> / للشخص</p>
+                        <h3 style="direction:rtl;font-size: 24px;font-weight: 900;">خطة عائلية</h3>
+                        <p style="direction:rtl;font-size: 24px;font-weight: 700;"><span style="font-size: 18px;font-weight: 400;">هذه الخطوة مناسبة جداً إن كنت ترغب في قضاء إجازتك مع العائلة</p>
+                        
+                        <hr style="height: 1px;color:white;opacity: 1;">
+                        <ul style="list-style-image: url(assets/img/point.png);direction: rtl;font-size: 18px;font-weight:600;">
+                            <li >بطاقات سفر في الدرجة أولى</li>
+                            <li > حجز بفندق أربع نجوم</li>
+                            <li >رحلات ميدانية بشكل يومي</li>
+                        </ul>
+
+                        <br>
+                        <br>
+
+
+
+                        <div class="container-fluid" style="text-align: center;">
+
+                            <a  class="btn btn btn-xl" href="#about" style="font-family: lamaSans; font-weight: 700; font-size: 18px;background-color: rgba(0, 0, 0, 0); border: 1px solid white;border-radius: 20px;width: 100%;color: white;"> <img src="assets/img/arrow.png" alt=""> &nbsp; &nbsp; احجز الآن</a>
+    
+                        </div>
+     
+
+    
+                    </div>
+                </div>
+
+
+                <div class="col" style="margin-top: 47px;">
+    
+                    <div class = "card box1">
+                        <p style="direction:rtl;font-size: 24px;font-weight: 700;"><span style="font-size: 36px;font-weight: 900;">$260</span> / للشخص</p>
+                        <h3 style="direction:rtl;font-size: 24px;font-weight: 900;">خطة الاقتصادية</h3>
+                        <p style="direction:rtl;font-size: 24px;font-weight: 700;"><span style="font-size: 17px;font-weight: 400;">نقدم لك إمكانية زيارة بلدان العالم بأقل التكاليف الممكنة وبأفضل الخدمات</p>
+                        
+                        <hr style="height: 1px;color:#4C4C4C;opacity: 1;">
+                        <ul style="list-style-image: url(assets/img/point.png);direction: rtl;font-size: 18px;font-weight:600;">
+                            <li >بطاقات سفر في الدرجة الاقتصادية</li>
+                            <li > حجز بفندق ثلاث نجوم </li>
+                            <li >وجبات إفطار يومية</li>
+                        </ul>
+
+                        <br>
+                        <br>
+
+                        <div class="container-fluid" style="text-align: center;">
+
+                        <a  class="btn btn btn-xl" href="#about" style="font-family: lamaSans; font-weight: 700; font-size: 18px;background-color: rgba(0, 0, 0, 0); border: 1px solid black;border-radius: 20px;width: 100%;"> <img src="assets/img/arrow.png" alt=""> &nbsp; &nbsp; احجز الآن</a>
+
+                    </div>
+    
+                    </div>
+                </div>
+    
+    
+    
+            </div>
+        </div>
+        
+
+        <br id="clients">
+<br>
+<br>
+<br>
+
+
+        <div class="container-fluid" style="text-align: center;">
+            <p style="direction: rtl;font-weight: 900;font-size: 24px;color: #A5A5A5;" >قالوا عنا</p>
+            <h2 style="direction: rtl;font-weight: 900;font-size: 48px;color: #191919;" >آراء مجموعة من عملائنا</h2>
+        </div>        
+
+
+        <br>
+        <br>
+
+
+
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        
+            <div class="carousel-inner">
+
+                <div class="container" >
+
+
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+
+                        <div class="col" v-for="client in active_comments" style="padding-bottom: 0px;">
+                    
+                            <div class="card box2" >
+                            <div class="card-body" style="padding-bottom: 0px;">
+                                <div style="float: right;">
+                                    <span  v-for="_ in client.stars">
+                                        <img src="assets/img/star.png" style="display: inline;">
+                                    </span>
+                            </div>
+                            <br>
+                            <br>
+                                <div style="float: right;">
+                                    <span class="card-title" style="font-size: 24px;font-weight: 900;">{{client.name}}</span>
+                                    <span>&nbsp;&nbsp;&nbsp;</span>
+                                    <img  v-bind:src="client.img" style="display: inline-block;">
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                                <p style="direction: rtl;">{{client.comment}}</p>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    
+
+
+
+
+
+                </div>     
+                
+
+            </div>
+
+            
+          </div>
+
+
+          <br>
+
+
+          <div class="container-fluid" style="text-align: center;">
+
+
+          <svg @click="prev_comment()" width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_102_397)">
+            <rect x="7" y="5" width="48" height="48" rx="24" fill="#755AE8"/>
+            <rect x="8.25" y="6.25" width="45.5" height="45.5" rx="22.75" stroke="white" stroke-width="2.5"/>
+            </g>
+            <g clip-path="url(#clip0_102_397)">
+            <path d="M22 29C22 28.6057 22.1561 28.2114 22.4675 27.9108L32.2736 18.4513C32.8974 17.8496 33.9088 17.8496 34.5323 18.4513C35.1559 19.0528 35.1559 20.0283 34.5323 20.6301L25.8553 29L34.532 37.3699C35.1556 37.9717 35.1556 38.947 34.532 39.5485C33.9085 40.1505 32.8971 40.1505 32.2733 39.5485L22.4672 30.0891C22.1557 29.7883 22 29.3941 22 29Z" fill="white"/>
+            </g>
+            <defs>
+            <filter id="filter0_d_102_397" x="0" y="0" width="68" height="68" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dx="3" dy="5"/>
+            <feGaussianBlur stdDeviation="5"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_102_397"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_102_397" result="shape"/>
+            </filter>
+            <clipPath id="clip0_102_397">
+            <rect width="22" height="22" fill="white" transform="translate(40 18) rotate(90)"/>
+            </clipPath>
+            </defs>
+            </svg>
+
+            
+            <svg @click="next_comment()" width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_102_402)">
+                <rect x="55" y="53" width="48" height="48" rx="24" transform="rotate(180 55 53)" fill="#755AE8"/>
+                <rect x="53.75" y="51.75" width="45.5" height="45.5" rx="22.75" transform="rotate(180 53.75 51.75)" stroke="white" stroke-width="2.5"/>
+                </g>
+                <g clip-path="url(#clip0_102_402)">
+                <path d="M40 29C40 29.3943 39.8439 29.7886 39.5325 30.0892L29.7264 39.5487C29.1026 40.1504 28.0912 40.1504 27.4677 39.5487C26.8441 38.9472 26.8441 37.9717 27.4677 37.3699L36.1447 29L27.468 20.6301C26.8444 20.0283 26.8444 19.053 27.468 18.4515C28.0915 17.8495 29.1029 17.8495 29.7267 18.4515L39.5328 27.9109C39.8443 28.2117 40 28.6059 40 29Z" fill="white"/>
+                </g>
+                <defs>
+                <filter id="filter0_d_102_402" x="0" y="0" width="68" height="68" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dx="3" dy="5"/>
+                <feGaussianBlur stdDeviation="5"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_102_402"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_102_402" result="shape"/>
+                </filter>
+                <clipPath id="clip0_102_402">
+                <rect width="22" height="22" fill="white" transform="translate(22 40) rotate(-90)"/>
+                </clipPath>
+                </defs>
+                </svg>
+                
+
+                </div>
+
+
+
+<br id="#contact">
+<br>
+<br>
+<br>
+<br>
+
+<div class="container-fluid" >
+    <p style="direction: rtl;font-weight: 900;font-size: 24px;color: #A5A5A5;padding-right: 20px;" >هل لديك سؤال؟</p>
+    <h2 style="direction: rtl;font-weight: 900;font-size: 48px;color: #191919;padding-right: 20px;" >يسعدنا التواصل معك</h2>
+</div>        
+
+
+<br id="contact">
+<br>
+<br>
+<br>
+
+<div class="container" style="margin: auto;">
+
+<div class="row">
+
+        <div class="col-12 col-lg-6">
+        <div class="card" style="border-color: rgba(0, 0, 0, 0);">
+            <div class="card-body" style="direction: rtl;">
+                <div>
+                    <img src="assets/img/icon1.png" style="float: right;margin-left: 25px;">
+                        <span >
+                            <span style="font-weight: 900; font-size: 24px;">نقدم لك المساعدة</span>
+                            <br>
+                            <span style="color: #4C4C4C;font-size: 18px;font-weight: 400;"> 
+                                إن كان لديك اي مشكلة في البلد الذي تسافر 
+                                إليه سنقوم بمساعدك في هذا الموضوع.
+                            </span>
+
+
+                        </span>
+                </div>
+
+                <br>
+                <br>
+                <br>
+
+                
+                <div>
+                    <img src="assets/img/icon2.png" style="float: right;margin-left: 25px;">
+
+                        <span >
+                            <span style="font-weight: 900; font-size: 24px;">للتواصل</span>
+                            <br>
+                            <span style="color: #4C4C4C;font-size: 18px;font-weight: 400;">  يمكنك التواصل معنا عبر الفورم أو عبر البريدالإلكتروني </div><span style="color: #755AE8;">company@gmail.com</span> 
+                        </span>
+
+                        </span>
+
+                <br>
+                <br>
+                <br>
+
+                <div>
+                    <img src="assets/img/icon3.png" style="float: right;margin-left: 25px;">
+
+                        <span >
+                            <span style="font-weight: 900; font-size: 24px;">أوقات الدوام</span>
+                            <br>
+                            <span style="color: #4C4C4C;font-size: 18px;font-weight: 400;"> يمكنك التواصل يومياً أثناء أوقات الدوام من الساعة 9 صباحاً حتى 6 مسااً.</span>
+
+
+                        </span>
+                </div>
+                    
+            </div>
+        </div>
+        </div>
+
+
+        <div class="col-12 col-lg-6">
+            <div class="card box3">
+                <div class="card-body" style="direction: rtl;">
+                    <div style="font-size: 24px;font-weight: 900;">الاسم</div>
+                    <input class="form-control" type="text" placeholder="يرجى تسجيل اسمك الكامل"  style="border-color: black;height: 60px;border-radius: 15px;margin-top: 5px;">
+
+                    <br>
+
+                    <div style="font-size: 24px;font-weight: 900;">البريد الإلكتروني</div>
+                    <input class="form-control" type="text" placeholder="سجل بريدك الشخصي"  style="border-color: black;height: 60px;border-radius: 15px;margin-top: 5px;">
+
+                    <br>
+
+                    <div style="font-size: 24px;font-weight: 900;">الموضوع</div>
+                    <input class="form-control" type="text" placeholder="ما هو السؤال أو المشكلة التي لديك؟"  style="border-color: black;height: 120px;border-radius: 15px;margin-top: 5px;">
+                    <br>
+                    <button style="background-color: #191919;border-radius: 15px;color: white;width: 280px;height: 60px;"><span style="font-family: lamaSans;">أرسل الرسالة</span></button>
+
+                </div>
+
+
+            </div>
+            </div>
+
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<div class="box4 " style="direction: rtl;">
+    <div class="container">
+        <div class="row">
+
+        <div class="col-12 col-lg-4">
+            <a class="navbar-brand" href="#page-top" style="font-weight: 900; font-size: 30px; direction: rtl;color: white;"   >رحلاتي<span style="color: #FEC430">.</span> </a>
+            <br>
+            <br>
+            <p style="color: #797979;font-weight: 50;font-size: 20;width: 80%;">
+                شركة متخصصة في مجال السياحة والسفر نقدم خدمات تأمين الرحلات والحجوزات والفيز لكل أنحاء العالم.
+            </p>
+        </div>
+    
+
+    <div class="col" >
+        <p style="font-size: 24px;font-weight: 900;color: white;">حول</p>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >الشركة</a>
+        <br>
+        <br>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >من نحن؟</a>
+        <br>
+        <br>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >فرص العمل</a>
+        <br>
+        <br>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >المدونة</a>
+    </div>
+
+
+    <div class="col" >
+        <p style="font-size: 24px;font-weight: 900;color: white;">خدماتنا</p>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >بطاقات الطيران</a>
+        <br>
+        <br>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >الرحلات البحرية</a>
+        <br>
+        <br>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >الفنادق</a>
+        <br>
+        <br>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >الرحلات البرية</a>
+        <br>
+        <br>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >تأمين الفيزا</a>
+    </div>
+
+
+    <div class="col" >
+        <p style="font-size: 24px;font-weight: 900;color: white;">الحجوزات</p>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >العروض الجديدة</a>
+        <br>
+        <br>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >تأكد من حجزك</a>
+        <br>
+        <br>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >الاشتراكات</a>
+        <br>
+        <br>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >طرق السفر</a>
+    </div>
+
+    <div class="col" >
+        <p style="font-size: 24px;font-weight: 900;color: white;">الموقع</p>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >سياسة الخصوصية</a>
+        <br>
+        <br>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >شروط الاستخدام</a>
+        <br>
+        <br>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >بلغ عن مشكلة</a>
+        <br>
+        <br>
+        <a style="color: #797979;font-weight: 500;font-size: 20px;  text-decoration: none;" >تواصل معنا</a>
+    </div>
+    
+
+    <hr style="border: 1px solid #4C4C4C;margin-top: 50px;">
+
+    <div class="row">
+        <div class="col-12  col-sm-6">
+            <span style="display:inline;color: #797979; width: 70%;">2023 جميع الحقوق محفوظة لموقع للمصمم <span style="color: #FEC430;">أحمد سكماني</span></span>
+
+        </div>
+    
+        <div class="col-12 col-sm-6" style="direction: ltr">
+            <span style="display: inline-block;width: 30%;">
+                <svg width="158" height="42" viewBox="0 0 158 42" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                    <rect x="0.5" y="0.5" width="41" height="41" rx="7.5" stroke="#797979"/>
+                    <path d="M31 25.8995C31 29.7215 28.83 32 25.19 32H24C23.45 32 23 31.5275 23 30.95V24.8915C23 24.608 23.22 24.3665 23.49 24.3665L25.25 24.335C25.39 24.3245 25.51 24.2195 25.54 24.0725L25.89 22.067C25.8968 22.0215 25.8941 21.9751 25.8822 21.9308C25.8702 21.8865 25.8492 21.8455 25.8207 21.8106C25.7922 21.7757 25.7568 21.7476 25.717 21.7285C25.6771 21.7093 25.6338 21.6994 25.59 21.6995L23.46 21.731C23.18 21.731 22.96 21.5 22.95 21.2165L22.91 18.644C22.91 18.476 23.04 18.329 23.21 18.329L25.61 18.287C25.78 18.287 25.91 18.1505 25.91 17.972L25.87 15.452C25.87 15.2735 25.74 15.137 25.57 15.137L22.87 15.179C22.4759 15.1853 22.0868 15.2732 21.725 15.4376C21.3633 15.6021 21.0361 15.8399 20.762 16.1374C20.488 16.4349 20.2725 16.7863 20.128 17.1713C19.9835 17.5564 19.9128 17.9677 19.92 18.3815L19.97 21.269C19.98 21.563 19.76 21.794 19.48 21.8045L18.28 21.8255C18.11 21.8255 17.98 21.962 17.98 22.1405L18.01 24.1355C18.01 24.314 18.14 24.4505 18.31 24.4505L19.51 24.4295C19.79 24.4295 20.01 24.6605 20.02 24.944L20.11 30.929C20.12 31.517 19.67 32 19.11 32H16.81C13.17 32 11 29.7215 11 25.889V17.1005C11 13.2785 13.17 11 16.81 11H25.19C28.83 11 31 13.2785 31 17.1005V25.8995Z" fill="white"/>
+                    <rect x="58.5" y="0.5" width="41" height="41" rx="7.5" stroke="#797979"/>
+                    <path d="M83.1971 11H74.8129C71.1711 11 69 13.2785 69 17.1005V25.889C69 29.7215 71.1711 32 74.8129 32H83.1871C86.8289 32 89 29.7215 89 25.8995V17.1005C89.01 13.2785 86.8389 11 83.1971 11ZM79.005 25.574C76.8639 25.574 75.1231 23.747 75.1231 21.5C75.1231 19.253 76.8639 17.426 79.005 17.426C81.1461 17.426 82.8869 19.253 82.8869 21.5C82.8869 23.747 81.1461 25.574 79.005 25.574ZM84.9279 16.124C84.8779 16.25 84.8079 16.3655 84.7178 16.4705C84.6178 16.565 84.5077 16.6385 84.3877 16.691C84.2056 16.7721 84.0046 16.7945 83.8104 16.7552C83.6161 16.7159 83.4375 16.6168 83.2971 16.4705C83.2071 16.3655 83.137 16.25 83.087 16.124C83.0356 15.9978 83.0084 15.8622 83.007 15.725C83.007 15.5885 83.037 15.452 83.087 15.326C83.137 15.1895 83.2071 15.0845 83.2971 14.9795C83.5272 14.738 83.8774 14.6225 84.1976 14.696C84.2676 14.7065 84.3276 14.7275 84.3877 14.759C84.4477 14.78 84.5077 14.8115 84.5678 14.8535C84.6178 14.885 84.6678 14.9375 84.7178 14.9795C84.8079 15.0845 84.8779 15.1895 84.9279 15.326C84.978 15.452 85.008 15.5885 85.008 15.725C85.008 15.8615 84.978 15.998 84.9279 16.124Z" fill="white"/>
+                    <rect x="116.5" y="0.5" width="41" height="41" rx="7.5" stroke="#797979"/>
+                    <path d="M142 13H132C129 13 127 15 127 18V24C127 27 129 29 132 29H142C145 29 147 27 147 24V18C147 15 145 13 142 13ZM138.89 22.03L136.42 23.51C135.42 24.11 134.6 23.65 134.6 22.48V19.51C134.6 18.34 135.42 17.88 136.42 18.48L138.89 19.96C139.84 20.54 139.84 21.46 138.89 22.03Z" fill="white"/>
+                    </svg>
+            
+                </span>
+        
+
+        </div>
+
+    </div>
+
+
+        
+</div>
+</div>
+
+</div>
+
+
+
+</span>
+<script src="app.js"></script>
+
+
+
+          <script src="assets/js/bootstrap.bundle.min.js"></script>
+          <script src="assets/js/scripts.js"></script>
+
+
+
+    </body>
+</html>
+
